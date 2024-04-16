@@ -1,66 +1,79 @@
 import os
 
-def exbir_nome_do_programa():
+def exibir_nome_da_AI():
+  print('''
+    ███╗░░░███╗░█████╗░███╗░░██╗████████╗███████╗██████╗░░█████╗░
+    ████╗░████║██╔══██╗████╗░██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗
+    ██╔████╔██║██║░░██║██╔██╗██║░░░██║░░░█████╗░░██████╔╝██║░░██║
+    ██║╚██╔╝██║██║░░██║██║╚████║░░░██║░░░██╔══╝░░██╔══██╗██║░░██║
+    ██║░╚═╝░██║╚█████╔╝██║░╚███║░░░██║░░░███████╗██║░░██║╚█████╔╝
+    ╚═╝░░░░░╚═╝░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░╚════╝░
+  ''')
 
-    print('Cyber.TI\n')
+def exibir_opções():
+  print(' 1. Iniciar AI') 
+  print(' 2. Selecionar opções da AI')
+  print(' 3. Voltar para o meunu')
+  print(' 4. Sair da AI')
+  print(' 5. Fechar Montero\n')
 
-def opcao_de_escolha():
-    print('1. Quem somos')
-    print('2. Serviços gerenciados')
-    print('3. Contratar seriços')
-    print('4. Suporte ao cliente')
-    print('5. Sair do aplicativo\n')
-    
-def opcao_invalida():
-    print('opcao invalida!\n')
-    input('Digite uma tecla para voltar para o menu inicial')
+def Você_escolheu_me_encerrar_a_Montero():
+    #opções de escolha 5
+    os.system('cls')
+    #os.system('cls')
+    print('Você encerrou a Montero AI')
+
+def Voltar_ao_menu_principal():
+    #opções de escolha 1#opções de escolha 3
+    input('Você escolheu voltar para o menu principal, digite uma tecla\n')
     main()
 
-def exbir_informacoes():
+def opção_invalida():
+    print('Você digitou uma opção invalida')
+    
+    Voltar_ao_menu_principal()
+    
+def Você_escolheu_me_iniciar():
+    #opções de escolha 1
     os.system('cls')
-    print('Somos empresa de suprote de T.I com o melhor atendimento e suporte ao cliente do mercado, tendo com base dessa afirmacao a opniao de diversos de diretores como:')
-    input('\ndigite uma tecla para voltar ao menu')
-    main()   
+    print('Bem vindo a Montero, a AI mais poderosa!\n')
 
-def opcao_escolhida():
-    try: 
-        opcao_escolhida = int(input('escolha uma opcao: '))
-      
+def Selecionar_opções_da_Ai():
+    #opções de escolha 2
+    os.system('cls')
+    print('Selecione as opções a seguir:')
+
+def Saindo_da_AI():
+    #opções de escolha 4
+    os.system('cls')
+    print('Você escolheu sair da AI')
+
+def opçao_selecionada():
+    try:
+        opçao_selecionada = int(input('escolha uma opcao:'))
         # opcao_escolhida = int(opcao_escolhida)
-        os.system('cls')
-        if opcao_escolhida == 1 :
-            exbir_informacoes()
-
-        elif opcao_escolhida == 2:
-            print('WebProtection, antivirus, data recovery, backup')
-
-        elif opcao_escolhida == 3 :
-            print('para consultar valores entre em contato com o nosso time comercial')
-
-        elif opcao_escolhida == 4 :
-            print(' Clique nesse link e te encaminharemos para um de nossos analistas')
-
-        elif opcao_escolhida == 5 :
-            print('Até mais!')
-
-        else:
-            opcao_invalida()
+        if opçao_selecionada == 1 :
+                Você_escolheu_me_iniciar()
+        elif opçao_selecionada == 2 :
+                Selecionar_opções_da_Ai()
+        elif opçao_selecionada == 3 :
+                Voltar_ao_menu_principal()
+        elif opçao_selecionada == 4 :
+                Saindo_da_AI()
+        elif opçao_selecionada == 5 :
+                Você_escolheu_me_encerrar_a_Montero()   
+        else: 
+                opção_invalida()    
     except:
-        opcao_invalida()      
-
+        opção_invalida()
 
 def main():
+## Chamando as funções
     os.system('cls')
-exbir_nome_do_programa()
-opcao_de_escolha()
-opcao_escolhida()
-
-
-
+    exibir_nome_da_AI()
+    exibir_opções() 
+    opçao_selecionada()
+    
 
 if __name__ == '__main__':
     main()
-
-
-
-
